@@ -1,0 +1,17 @@
+  version: "3"
+
+  services:
+    nginx-example:
+      container_name: nginx-example
+      build:
+          context: "./php"
+          dockerfile: Dockerfile
+      
+      image: nginx
+      ports:
+        - protocol: tcp
+          published: 8080
+          target: 80
+     
+   
+       
